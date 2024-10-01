@@ -218,7 +218,7 @@ if __name__ == "__main__":
     print("Data loaded. Shape of X:", X.shape, "Shape of Y:", Y.shape)
 
     # Train the model
-    model = DecisionTreeClassifier(dmax=2, minsamp=2)
+    model = DecisionTreeClassifier(dmax=7, minsamp=2)
     print("Model initialized. Starting training...")
     model.fit(X, Y)
     print("Model training completed.")
