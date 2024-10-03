@@ -218,7 +218,7 @@ if __name__ == "__main__":
     print("Data loaded. Shape of X:", X.shape, "Shape of Y:", Y.shape)
 
     # Train the model
-    model = DecisionTreeClassifier(dmax=7, minsamp=2)
+    model = DecisionTreeClassifier(dmax=7, minsamp=2, w=10)
     print("Model initialized. Starting training...")
     model.fit(X, Y)
     print("Model training completed.")
@@ -244,15 +244,15 @@ if __name__ == "__main__":
     right_child_info = model.get_node_info(['R'])
     print("Right Child of Root Info:", right_child_info)
     
-    model_path = r"C:\Users\samvi\OneDrive\Desktop\Semester\IML\Sameer_Rangwala_A1\decision_tree_task\models\decision_tree_model_final.pkl"
+    model_path = r"C:\Users\samvi\OneDrive\Desktop\Semester\IML\Sameer_Rangwala_A1\decision_tree_task\models\decision_tree_model_2.pkl"
     save_model(model, model_path)
     print(f"Model saved to {model_path}")
 
-    pred_path = r"C:\Users\samvi\OneDrive\Desktop\Semester\IML\Sameer_Rangwala_A1\decision_tree_task\results\train_predicitons.csv"
+    pred_path = r"C:\Users\samvi\OneDrive\Desktop\Semester\IML\Sameer_Rangwala_A1\decision_tree_task\results\decision_tree_model2_predictions.csv"
     save_predictions(y_pred, pred_path)
     print(f"Predictions saved to {pred_path}")
 
-    metrics_path = r"C:\Users\samvi\OneDrive\Desktop\Semester\IML\Sameer_Rangwala_A1\decision_tree_task\results\train_metrics.txt"
+    metrics_path = r"C:\Users\samvi\OneDrive\Desktop\Semester\IML\Sameer_Rangwala_A1\decision_tree_task\results\model_2_results.txt"
     save_metrics(metrics, metrics_path)
     print(f"Metrics saved to {metrics_path}")
 
